@@ -1,0 +1,418 @@
+/* === Reset & Global === */
+
+{ margin: 0; padding: 0; box-sizing: border-box; }
+
+
+html, body { height: 100%; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to right top, #004e92, #000428); /* Frosted Teal & Midnight */ color: #f1f1f1; overflow-x: hidden; }
+
+/* === HEADER === */ .main-header { background: linear-gradient(to right, #000428, #004e92); color: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
+.header-container { max-width: 1200px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
+
+.logo h1 { font-size: 28px; display: flex; align-items: center; gap: 10px; color: white; }
+
+.logo i { font-size: 50px; color: #00cfff; }
+
+.nav-links { list-style: none; display: flex; gap: 25px; }
+
+.nav-links li a { text-decoration: none; color: white; font-weight: 500; transition: color 0.4s ease; }
+
+.nav-links li a:hover { color: #00cfff; }
+
+/* === LOGIN PAGE / AUTH FORMS === */ .login-wrapper, .profile-container, .auth-box, .page-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; padding: 40px 20px; }
+
+.login-box, .auth-box, .profile-container .main-content, .main-content { background: rgba(255, 255, 255, 0.07); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 40px; border-radius: 15px; width: 100%; max-width: 500px; color: #fff; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); text-align: left; }
+
+.login-box h2, .auth-box h2, .profile-container h2, .main-content h2, .page-title { text-align: center; margin-bottom: 20px; color: #ffffff; }
+
+input[type="email"], input[type="password"], input[type="text"], input[type="date"], input[type="time"], textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.15); color: #fff; font-size: 15px; outline: none; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2); }
+
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.6); }
+
+button { background-color: #00cfff; border: none; color: white; padding: 12px 20px; border-radius: 10px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; transition: background 0.3s ease; }
+
+button:hover { background-color: #008db3; }
+
+.error-msg { color: #ff6b6b; margin-bottom: 15px; }
+
+.auth-box a, .login-box a, .profile-container a, .main-content a { color: #00cfff; text-decoration: none; }
+
+.auth-box a:hover, .login-box a:hover, .profile-container a:hover, .main-content a:hover { text-decoration: underline; }
+
+/* === EVENT CARDS === */ .event-card { background: rgba(255,255,255,0.05); padding: 20px; margin-bottom: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+.event-card h3 { color: #00cfff; margin-bottom: 10px; }
+
+.event-card img { width: 100%; max-width: 400px; margin: 10px 0; border-radius: 8px; }
+
+/* === TABLE === */ .styled-table { width: 100%; border-collapse: collapse; background: rgba(255, 255, 255, 0.07); color: #fff; margin-top: 20px; }
+
+.styled-table th, .styled-table td { padding: 12px 15px; border: 1px solid rgba(255,255,255,0.1); }
+
+.styled-table th { background-color: rgba(255,255,255,0.1); font-weight: bold; }
+
+/* === FOOTER === */ .main-footer { background: linear-gradient(to right, #000428, #004e92); color: white; padding: 20px 0; text-align: center; width: 100%; box-shadow: 0 -2px 5px rgba(0,0,0,0.2); margin-top: auto; position: relative; }
+
+.footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* === Enhanced Form Container === */
+.login-box,
+.auth-box,
+.profile-container,
+.event-card,
+.main-content {
+    background: rgba(255, 255, 255, 0.1); /* subtle light tone */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 30px;
+}
+button, .btn {
+    background: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover, .btn:hover {
+    background: #009acd;
+}
+form {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+/* === Form Enhancement === */
+form {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="time"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #00bfff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+form button {
+    background-color: #00bfff;
+    border: none;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #009acd;
+}
+/* === Button Glow on Hover === */
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+/* === Smooth Inputs & Textareas === */
+input, textarea {
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.07);
+    color: #fff;
+    padding: 12px;
+    border: none;
+}
+input::placeholder, textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* === Event Card Style (for event list) === */
+.event-card {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+h2, h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.success-msg {
+    background: rgba(0, 255, 127, 0.15);
+    border-left: 5px solid #00fa9a;
+    color: #00fa9a;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.error-msg {
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 5px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* === Fade-In Animation === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-wrapper,
+.main-content,
+.login-box,
+.auth-box,
+.profile-container,
+.event-card {
+    animation: fadeIn 0.7s ease-in-out;
+}
+/* === Loader === */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 32, 39, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none;
+}
+
+.loader {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #00bfff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* === ABOUT US PAGE === */
+.about-us {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00d9ff;
+}
+
+.about-us h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #80f7ff;
+}
+
+.about-us p, .about-us ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-us ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-us ul li::before {
+    content: "✔ ";
+    margin-right: 8px;
+    color: #00ffcc;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #00bfff;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0077cc;
+}
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.filter-form label {
+    color: #fff;
+    font-weight: 500;
+}
+
+.filter-form select,
+.filter-form input[type="date"],
+.filter-form button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+.filter-form button {
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+.badge-registered {
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+body.login-page {
+    background: url('../images/bg-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+}
+
+/* Add a dark overlay to improve contrast */
+body.login-page::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust darkness here */
+    z-index: -1;
+}
+.success-msg {
+    color: #28a745;
+    background: #d4edda;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.error-msg {
+    color: #dc3545;
+    background: #f8d7da;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    background: #f1f1f1;
+    color: #333;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
